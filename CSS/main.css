@@ -1,0 +1,429 @@
+/* Start Global Rules */
+:root {
+    --main-color: rgb(39, 8, 73);
+    --background-color: #101010;
+    --head-word-color: rgb(255, 0, 187);
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    user-select: none;
+}
+.container {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    } 
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }    
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.text-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    color: var(--head-word-color);
+    padding: 10px;
+}
+/* End Global Rulse */
+/* Start Animation */
+@keyframes img {
+    0%,25% {
+        opacity: 0;
+    }
+    25%,75% {
+        opacity: 1;
+    }
+    75%,100% {
+        opacity: 0;
+    }
+}
+/* End Animation */
+/* Start Header */
+.header {
+    background-color: var(--main-color);
+    -webkit-box-shadow: 0 0 10px;
+    -moz-box-shadow: 0 0 10px ;
+    box-sizing: 0 0 10px ;
+}
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .container h2 {
+    color: var(--head-word-color);
+    transition: 0.5s;
+}
+.header .container ul {
+    display: flex;
+}
+.header .container ul li {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.header .container ul li a {
+    color: var(--head-word-color);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    transition: 0.5s;
+}
+.header .container ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--head-word-color);
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.header .container ul li a:hover {
+    background-color: blueviolet;
+}
+.header .container ul li a:hover::before {
+    width: 100%;
+}
+/* End Header */
+/* Start Loading */
+.loading .container {
+    display: flex;
+    min-height: calc(100vh - 72px);
+    align-items: center;
+    justify-content: center;
+}
+.loading .container .text {
+    flex: 1;
+}
+.loading .container .text h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--head-word-color);
+}
+.loading .container .text p {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+.loading .container img {
+    width: 600px;
+    animation: img 5s linear infinite;
+}
+/* End Loading */
+/* Start librery */
+/* Start head */
+.head {
+    background-color: var(--main-color);
+    -webkit-box-shadow: 0 0 10px;
+    -moz-box-shadow: 0 0 10px;
+    box-sizing: 0 0 10px ;
+}
+.head .container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head .container ul li {
+    color: var(--head-word-color);
+    padding: 10px 30px;
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.head .container ul li svg {
+    margin-right: 5px;
+}
+.head .container ul li::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--head-word-color);
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+.head .container ul li:hover {
+    background-color: blueviolet;
+}
+.head .container ul li:hover::before {
+    width: 100%;
+}
+/* End head */
+/* Start list */
+.list ul {
+    display: flex;
+}
+.list li {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.list li.active {
+    background-color: white;
+    color: var(--main-color);
+}
+.list li.active:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+.list li:hover {
+    background-color: #fff;
+    color: var(--main-color);
+}
+/* End list */
+/* Start Search */
+.searchDiv .container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    transition: 0.5s;
+}
+.searchDiv .searchInput {
+    width: 350px;
+    padding: 20px 30px;
+    border-radius: 10px 0 0 10px;
+    border: 0;
+}
+.searchDiv .container button {
+    padding: 20px 30px;
+    border-radius: 0 10px 10px 0;
+    border: 0;
+    background-color: var(--main-color);
+    color: var(--head-word-color);
+    cursor: pointer;
+}
+/* End Search */
+/* Start text */
+.text .container {
+    display: flex;
+    justify-content: center;
+}
+.text .container p {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+/* End text */
+/* Start Books */
+.boxs .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0;
+}
+.boxs .container .all {
+    padding: 20px;
+    margin: 10px;
+    -webkit-box-shadow: 0px 20px 10px;
+    -moz-box-shadow: 0px 20px 10px;
+    box-sizing: 0px 20px 10px;
+    border-radius: 7px;
+    transition: 0.5s;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.boxs .container .all:hover {
+    transform: translateY(-10px);
+    background-color: #222;
+}
+.boxs .container img {
+    width: 200px;
+    height: 300px;
+    border-radius: 7px;
+}
+.boxs .container .all .icon {
+    color: gold;
+    text-align: center;
+    padding: 5px 0;
+}
+.boxs .container .all p {
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+.boxs .container .all .details {
+    color: var(--head-word-color);
+    font-weight: bold;
+}
+.box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.64);
+    transition: 0.5s;
+    display: none;
+}
+.box .content {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    color: white;
+    padding: 20px;
+    background-color: var(--main-color);
+}
+.box .content img {
+    width: 200px;
+    height: 300px;
+    border-radius: 7px;
+}
+.box .content .contain {
+    padding: 4px 4px 0;
+    color: #666;
+    position: relative;
+}
+.box .content .enc {
+    content: "";
+    width: 5px;
+    height: 2px;
+    position: absolute;
+    border: 8px solid #666;
+    border-color: transparent transparent transparent #666;
+    left: 25px;
+}
+.box .content .dic {
+    content: "";
+    width: 5px;
+    height: 2px;
+    position: absolute;
+    border: 8px solid #666;
+    border-color: transparent #666 transparent transparent;
+    right: 25px;
+}
+.box .content button {
+    width: 50%;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 0;
+    font-weight: bold;
+}
+.box .content .download {
+    background-color: green;
+    color: white;
+}
+.box .content .read {
+    background-color: red;
+    color: white;
+}
+.box .content input {
+    width: 50%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 0;
+    margin: 5px;
+}
+.box .content .close {
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.box .content button svg {
+    margin-right: 4px;
+}
+/* End Books */
+/* Start Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--main-color);
+}
+.footer h2 {
+    color: var(--head-word-color);
+    padding: 10px 0;
+}
+.footer p {
+    color: white;
+}
+.footer p span {
+    color: var(--head-word-color);
+    font-weight: bold;
+}
+/* End Footer */
+/* End librery */
+/* Start Contact */
+.landing .container {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 178px);
+}
+.landing .container img {
+    width: 50%;
+}
+.landing .container p {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0;
+    color: white;
+}
+/* End Contact */
